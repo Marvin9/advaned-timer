@@ -1,0 +1,128 @@
+/*
+-#root
+    -set
+       -set-timer
+        -inline
+            -div * 3
+                -btn-incr, h2, btn-decr
+        -btn-reset, btn-submit
+-#timer
+    -timer
+        -div, btn-pause, btn-play, btn-stop
+
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+*
+{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+button {
+    background: none;
+    border:none;
+    color: #fff;
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+body {
+    font-family:  'Open Sans';
+    background: #3d3d3d;
+}
+
+#root, #timer {
+    position: relative;
+    height: 50vh;
+    color: #fff;
+}
+
+.inline {
+    position: absolute;
+    left : 50%;
+    top : 40%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    text-align: center;
+}
+
+.inline > div {
+    margin: 0 20px;
+}
+
+.inline h2 {
+    margin: 20px 0;
+}
+
+#root {
+    background: #ff9f1a;
+}
+
+#timer {
+    background: #ffaf40;
+}
+
+.incr, .decr {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #fff;
+    font-size: 1.5em;
+    transition: .5s;
+}
+
+.incr:hover, .decr:hover {
+    border-color: #ffaf40;
+}
+
+.btn-sec {
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translate(-50%, 0%);
+}
+
+.reset, .submit, .pause, .play, .stop {
+    border: 1px solid #fff;
+    background: #ffaf40;
+    padding : 10px 30px;
+    margin:0 20px;
+    border-radius: 2px;
+}
+
+#timer .wrapper {
+    position: absolute;
+    left: 50%;
+    top:40%;
+    transform: translate(-50%, -50%);
+}
+
+#timer .wrapper > * { display: inline;}
+
+.btn-sec-2 {
+    position: absolute;
+    left:50%;
+    transform: translate(-50%, 0);
+    bottom: 25%;
+}
+
+.stop {
+    color: #ffaf40;
+    background: #fff;
+    font-weight: bolder;
+}
+
+.pause-text {
+    position: absolute;
+    bottom:5px;
+    right : -80px;
+}
